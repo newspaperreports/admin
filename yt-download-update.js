@@ -1,6 +1,6 @@
 const localVersion = localStorage.getItem('userVersion') || '1.0.0';
 
-fetch('https://raw.githubusercontent.com/newspaperreports/update-checker/main/version.json')
+fetch('https://cdn.jsdelivr.net/gh/newspaperreports/yt-downloader-online/main/test.css')
   .then(res => res.json())
   .then(data => {
     if (data?.currentVersion && data?.cssUrl && localVersion !== data.currentVersion) {
