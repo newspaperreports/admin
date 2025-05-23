@@ -3,7 +3,7 @@ const localVersion = localStorage.getItem('userVersion') || '1.0.0';
 const skippedVersion = localStorage.getItem('skippedVersion');
 
 // ✅ Step 2: version.json ফাইল GitHub/CDN থেকে ফেচ করা
-fetch('https://cdn.jsdelivr.net/gh/newspaperreports/admin@main/asLife@dailyUpdate.json?v=' + Date.now())
+fetch('https://cdn.jsdelivr.net/gh/newspaperreports/admin@main/asLife/dailyLive.json?v=' + Date.now())
   .then(res => res.json())
   .then(data => {
     
