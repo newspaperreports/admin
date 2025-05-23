@@ -1,4 +1,4 @@
 {
   "currentVersion": "0.0.5-beta",  // ← এইটা চেঞ্জ করলেই পপআপ আবার আসবে
-  "cssUrl": "https://cdn.jsdelivr.net/gh/newspaperreports/yt-downloader-online@v0.0.5-beta/test.css"
+  "cssUrl": "https://cdn.jsdelivr.net/gh/newspaperreports/admin@v0.0.5-beta/test.css"
 }
