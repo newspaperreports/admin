@@ -1,14 +1,14 @@
 // ✅ Step 1: লোকাল ভার্সন চেক করা (localStorage থেকে)
 const localVersion = localStorage.getItem('userVersion') || '1.0.0';
 
-// ✅ Step 2: version.json ফাইল GitHub/CDN থেকে ফেচ করা
-fetch('https://raw.githubusercontent.com/newspaperreports/update-checker/main/version.json') // এখানে আপনার version.json লিংক দিন
+// ✅ Step 2: version.json ফাইল GitHub/CDN থেকে ফেচ করা (cache-busting সহ)
+fetch('https://raw.githubusercontent.com/newspaperreports/update-checker/main/version.json?v=' + Date.now())
   .then(res => res.json())
   .then(data => {
-    // ✅ Step 3: যদি নতুন ভার্সন পাওয়া যায় এবং CSS URL থাকে
+    // ✅ Step 3: যদি নতুন ভার্সন পাওয়া যায় এবং CSS URL থাকে এবং ভার্সন আলাদা হয়
     if (data?.currentVersion && data?.cssUrl && localVersion !== data.currentVersion) {
       
-      // ✅ Step 4: পপআপ তৈরি করুন
+      // ✅ Step 4: পপআপ তৈরি করুন ইউজারের কাছে আপডেট জানানোর জন্য
       const popup = document.createElement('div');
       popup.innerHTML = `
         <div style="
@@ -36,16 +36,21 @@ fetch('https://raw.githubusercontent.com/newspaperreports/update-checker/main/ve
       `;
       document.body.appendChild(popup);
 
-      // ✅ Step 5: ইউজার 'Update Now' ক্লিক করলে CSS লোড ও লোকাল ভার্সন সেট করা হবে
+      // ✅ Step 5: ইউজার 'Update Now' ক্লিক করলে CSS লোড হবে (cache-busting সহ)
       document.getElementById('updateNow').onclick = () => {
         const link = document.createElement('link');
         link.rel = 'stylesheet';
-        link.href = data.cssUrl; // version.json থেকে পাঠানো লিংক
+        // cache-busting করার জন্য Date.now() যোগ করা হয়েছে যাতে ব্রাউজার নতুন CSS ফাইল লোড করে
+        link.href = data.cssUrl + '?v=' + Date.now();
         document.head.appendChild(link);
 
-        localStorage.setItem('userVersion', data.currentVersion); // নতুন ভার্সন সেট করুন
-        popup.remove(); // পপআপ সরান
+        // ✅ নতুন ভার্সন localStorage এ সেভ করা হবে যাতে পরবর্তীবার আপডেট না দেখতে হয়
+        localStorage.setItem('userVersion', data.currentVersion);
+
+        // ✅ পপআপ সরিয়ে দিন
+        popup.remove();
       };
     }
   })
-  .catch(error => console.error("Update checker error:", error)); // ✅ সমস্যা হলে কনসোলে দেখাবে
+  // ✅ Step 6: কোন এরর হলে কনসোলে দেখাবে
+  .catch(error => console.error("Update checker error:", error));
