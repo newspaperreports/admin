@@ -1,10 +1,6 @@
 {
-  "currentVersion": "0.0.7-beta",
-  "cssUrl": "https://cdn.jsdelivr.net/gh/newspaperreports/admin@main/default.css"
+  "currentVersion": "0.0.1-beta",
+  "cssUrl": "https://cdn.jsdelivr.net/gh/newspaperreports/admin@0.0.1-beta/default.css"
 }
 
-// Main Admin AS - Life Update
-{
-  "currentVersion": "0.0.0-beta",
-  "cssUrl": "https://cdn.jsdelivr.net/gh/newspaperreports/admin@0.0.0-beta/asLife@adminDaily.css"
-}
+
