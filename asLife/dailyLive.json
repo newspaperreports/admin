@@ -1,4 +1,6 @@
 {
-  "currentVersion": "0.0.1-beta",
-  "cssUrl": "https://cdn.jsdelivr.net/gh/newspaperreports/admin@0.0.1-beta/asLife/dailyLive.css"
+  "image": "https://i.pinimg.com/736x/54/09/1b/54091b66c458d1e3c03c5ea7a57cf2c6.jpg",
+  "title": "Today’s Live Update: Big News!",
+  "buttonText": "Watch Now",
+  "link": "https://example.com/live"
 }
