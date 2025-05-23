@@ -28,7 +28,7 @@ fetch('https://cdn.jsdelivr.net/gh/newspaperreports/admin@main/version.json?v=' 
           font-family:sans-serif;
           width:280px;">
           <strong>🔔 Update Available!</strong><br/>
-          News Future <code>${data.currentVersion}</code> উপলব্ধ।<br/>
+          Test Future <code>${data.currentVersion}</code> Available.<br/>
           <button id="updateNow" style="
             margin-top:8px;
             padding:6px 12px;
