@@ -2,7 +2,7 @@
 const localVersion = localStorage.getItem('userVersion') || '1.0.0';
 
 // ✅ Step 2: version.json ফাইল GitHub/CDN থেকে ফেচ করা (cache-busting সহ)
-fetch('https://raw.githubusercontent.com/newspaperreports/update-checker/main/version.json?v=' + Date.now())
+fetch('https://cdn.jsdelivr.net/gh/newspaperreports/admin@main/version.json?v=' + Date.now())
   .then(res => res.json())
   .then(data => {
     // ✅ Step 3: যদি নতুন ভার্সন পাওয়া যায় এবং CSS URL থাকে এবং ভার্সন আলাদা হয়
