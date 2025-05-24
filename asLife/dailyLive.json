@@ -1,6 +1,8 @@
 {
-  "title": "আজকের কাজ কম্পিলিট করা হয়েছে",
+  "status": "on",
+  "console":  "on",
+  "title": "Today World Best News",
   "image": "https://i.pinimg.com/736x/8b/d3/a4/8bd3a4f759c47363303865919ba7444d.jpg",
-  "buttonText": "Ok",
+  "buttonText": "More Now",
   "link": "https://your-link.com"
 }
