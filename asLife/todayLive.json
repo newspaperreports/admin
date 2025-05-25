@@ -4,7 +4,7 @@
   "title": "আজ বাংলাদেশে প্রবল বৃষ্টি পড়তেছে আপনার এলাকার খবর জানতে...",
   "image": "https://i.pinimg.com/736x/8b/d3/a4/8bd3a4f759c47363303865919ba7444d.jpg",
   "buttonText": "দেখুন",
-  "link": "https://your-link.com"
+  "link": "https://your-link.com",
   "licenseKey": "NewspaperReports-AS - Life Official",
   "allowedDomains": ["newspaperreports.com", "localhost"],
   "notification": "asupdatemedia518@gmail.com"
