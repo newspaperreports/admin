@@ -1,14 +1,3 @@
-/* 
------------------------------------------------
-Newspaper Reports Template Style
-Name:        Newspaper Reports
-License:     Free Version
-Version:     3.0
-Author:      Newspaper Reports
-Author Url:  https://www.newspaperreports.com
-Contact:     asupdatemedia518@gmail.com
------------------------------------------------ */
-
 /* =======================
    Root Variables
 ========================== */
@@ -54,457 +43,116 @@ Contact:     asupdatemedia518@gmail.com
     --global-border-top-color: rgb(0, 152, 254);
     /* Add Primary */
     --primary: #FF0000;
+    --primary-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --secondary: #282828;
     --light: #f9f9f9;
     --dark: #212121;
     --gray: #aaaaaa;
 }
 
-/* =======================
-   Reset and Base Styles
-========================== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+a {
+  text-decoration: none;
 }
 
-body {
-    background-color: #f5f5f5;
-    color: var(--dark);
-    line-height: 1.6;
+.d-flex {
+  display: flex;
 }
 
-/* =======================
-   Header Section
-========================== */
-header {
-    background: linear-gradient(135deg, var(--primary), #c31432);
-    color: white;
-    padding: 1rem 0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 1.8rem;
-    font-weight: 700;
-}
-
-.logo i {
-    color: white;
-}
-
-.nav-links {
-    display: flex;
-    gap: 1.5rem;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-}
-
-.nav-links a:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* হোভার করলে ব্যাকগ্রাউন্ড হালকা সাদা */
-}
-
-/* =======================
-   Category Buttons
-========================== */
-.categories {
-    background-color: white;
-    padding: 1rem 0;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
-
-.category-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    gap: 1rem;
-    padding: 0 2rem;
-    overflow-x: auto; /* ছোট ডিভাইসে সাইডে স্ক্রল সম্ভব */
-}
-
-.category-btn {
-    background-color: var(--light);
-    border: 1px solid #e0e0e0;
-    padding: 0.5rem 1.2rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    white-space: nowrap; /* লাইন ব্রেক বন্ধ রাখবে */
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.category-btn:hover, .category-btn.active {
-    background-color: var(--primary);
-    color: white;
-    border-color: var(--primary);
-}
-
-/* =======================
-   Main Container
-========================== */
-.container {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 0 1.5rem;
-}
-
-.download-card {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    padding: 2rem;
-    text-align: center;
-}
-
-.card-title {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: var(--dark);
-}
-
-.card-description {
-    color: var(--gray);
-    margin-bottom: 2rem;
-    font-size: 1rem;
-}
-
-/* =======================
-   Input Section
-========================== */
-.input-group {
-    position: relative;
-    margin-bottom: 1.5rem;
-}
-
-.input-group input {
-    width: 100%;
-    padding: 1rem 1.5rem;
-    border: 2px solid #e0e0e0;
-    border-radius: 50px;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-}
-
-.input-group input:focus {
-    border-color: var(--primary);
-    outline: none; /* ফোকাসে ডিফল্ট আউটলাইন সরানো */
-}
-
-.input-group button {
-    position: absolute;
-    right: 5px;
-    top: 5px;
-    background-color: var(--primary);
-    color: white;
-    border: none;
-    padding: 0.7rem 1.5rem;
-    border-radius: 50px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.input-group button:hover {
-    background-color: #cc0000; /* হোভার কালার একটু ডার্কার রেড */
-}
-
-/* =======================
-   Results Section
-========================== */
-.result-container {
-    display: none; /* প্রাথমিকভাবে ফলাফল লুকানো থাকবে */
-    margin-top: 2rem;
-    animation: fadeIn 0.5s ease; /* ধীরে ধীরে আসার অ্যানিমেশন */
+.meta_asAdmin_live_post_area {
+  position: fixed;
+  display: none;
+  top: 20%;
+  transform: translateY(-50%);
+  right: 10%;
+  z-index: 99999;
+  animation: fadeIn 0.5s ease-in-out forwards;
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(-40%) scale(0.95); }
+  to { opacity: 1; transform: translateY(-50%) scale(1); }
 }
 
-/* =======================
-   ভিডিও ইনফো (Thumbnail ও Details)
-========================== */
-.video-info {
-    display: flex;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-    align-items: center;
-    text-align: left;
+.asAdmin_live_info {
+  position: relative;
+  
 }
 
-.thumbnail-bax {
-    width: 180px;
-    height: 120px;
+.asAdmin_live_aa {
+  display: block;
+  position: relative;
+  width: 300px;
+  height: auto;
+  padding: 10px;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 1px 1px 3px rgba(0.5, 0.5, 0.5, 0.5);
 }
 
-.thumbnail {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    object-fit: cover; /* ছবি ফিট থাকবে */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.asAdmin_live_headLine {
+  font: 700 16px / 22px var(--primary-font);
+  color: var(--global-item-headline-color);
 }
 
-.video-details {
-    flex: 1;
+.asAdmin_live_view_btn {
+  width: 100%;
+  margin: 10px 0 0;
+  font: 600 14px / 28px var(--global-item-headline-font);
+  border: 1px solid var(--global-border-any-side-color);
+  border-radius: 50px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #560be2;
+  transition: all 0.3s ease;
 }
 
-.video-title {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    color: var(--dark);
+.asAdmin_live_view_btn:hover {
+  color: #00FF7F;
+  background-color: #303030;
 }
 
-.video-meta {
-    display: flex;
-    gap: 1rem;
-    color: var(--gray);
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
+.asAdmin_Live_image {
+  float: left;
+  margin: 0 10px 0 0;
+  width: 70px;
+  height: 70px;
+  background: #F9F9FA;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
-#video-description {
-    max-height: 50px;
-    overflow: hidden; /* অতিরিক্ত টেক্সট লুকানো */
+.asAdmin_live_img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
 }
 
-/* =======================
-   Download Options Section
-========================== */
-.download-options {
-    background-color: var(--light);
-    border-radius: 8px;
-    padding: 1.5rem;
+.asAdmin_post_close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 0px 0px;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid var(--global-border-any-side-color);
+  border-radius: 3px;
+  color: #000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
 }
 
-.option-tabs {
-    display: flex;
-    border-bottom: 1px solid #e0e0e0;
-    margin-bottom: 1.5rem;
+.asAdmin_post_close span {
+  font-size: 14px;
+  padding: 2px 4px;
 }
 
-.tab-btn {
-    padding: 0.7rem 1.5rem;
-    background: none;
-    border: none;
-    font-weight: 600;
-    color: var(--gray);
-    cursor: pointer;
-    position: relative;
+.asAdmin_post_close.show {
+  opacity: 1;
+  visibility: visible;
 }
 
-.tab-btn.active {
-    color: var(--primary);
-}
-
-.tab-btn.active::after {
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background-color: var(--primary);
-}
-
-/* ডাউনলোড ফরম্যাট গ্রিড */
-.format-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1rem;
-}
-
-.format-card {
-    background-color: white;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    padding: 1rem;
-    transition: all 0.3s ease;
-}
-
-.format-card:hover {
-    border-color: var(--primary);
-    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.1);
-}
-
-.format-header {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0.5rem;
-}
-
-.format-type {
-    font-weight: 700;
-    color: var(--dark);
-}
-
-.format-quality {
-    background-color: var(--primary);
-    color: white;
-    padding: 0.2rem 0.5rem;
-    border-radius: 4px;
-    font-size: 0.8rem;
-}
-
-.format-details {
-    font-size: 0.9rem;
-    color: var(--gray);
-    margin-bottom: 1rem;
-}
-
-.download-btn {
-    width: 100%;
-    padding: 0.5rem;
-    background-color: var(--primary);
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.download-btn:hover {
-    background-color: #cc0000;
-}
-
-/* =======================
-   Footer Section
-========================== */
-footer {
-    background-color: var(--secondary);
-    color: white;
-    padding: 2rem 0;
-    margin-top: 2rem;
-}
-
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
-}
-
-.footer-logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-}
-
-.footer-links h3 {
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-}
-
-.footer-links ul {
-    list-style: none;
-}
-
-.footer-links li {
-    margin-bottom: 0.5rem;
-}
-
-.footer-links a {
-    color: #aaaaaa;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.footer-links a:hover {
-    color: white;
-}
-
-.social-icons {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.social-icons a {
-    color: white;
-    font-size: 1.2rem;
-}
-
-/* কপিরাইট টেক্সট */
-.copyright {
-    text-align: center;
-    padding-top: 2rem;
-    margin-top: 2rem;
-    border-top: 1px solid #444;
-    color: #777;
-    font-size: 0.9rem;
-}
-
-.meta-author a {
-    color: #777;
-    text-decoration: none;
-}
-
-.copyright:hover a {
-    color: #0ce731;
-}
-
-/* =======================
-   Responsive Design
-========================== */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .video-info {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .thumbnail-bax {
-        width: 100%;
-        height: auto;
-        max-height: 250px;
-    }
-
-    .format-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 420px) {
-    .input-group {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .input-group button {
-        position: initial;
-        margin-top: 10px;
-    }
+.asAdmin_post_close:hover {
+  color: #FF0000;
 }
