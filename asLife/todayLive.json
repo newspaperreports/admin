@@ -7,6 +7,6 @@
   "link": "https://your-link.com",
   "version": "",
   "licenseKey": "NewspaperReports-AS - Life Official",
-  "allowedDomains": ["newspaperreports.com", "localhost"],
+  "allowedDomains": ["newspaperreports.com", "localhost", "127.0.0.1"],
   "notification": "asupdatemedia518@gmail.com"
 }
