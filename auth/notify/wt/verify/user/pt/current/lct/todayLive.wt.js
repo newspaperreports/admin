@@ -1,5 +1,5 @@
 // 🔗 JSON ফাইলের লিংক (GitHub থেকে লাইভ ডেটা লোড করা হবে)
-const jsonUrl = "https://raw.githubusercontent.com/newspaperreports/admin/refs/heads/main/asLife/todayLive.json";
+const jsonUrl = "https://raw.githubusercontent.com/newspaperreports/admin/refs/heads/main/auth/wt/verify/user/pt/current/lct/todayLive.json";
 
 // 🕒 ক্লোজ বাটন কত সেকেন্ড পরে দেখানো হবে (মিলিসেকেন্ডে)
 const closeBtnDelay = 3000; // ৩ সেকেন্ড পর ক্লোজ বাটন শো হবে
