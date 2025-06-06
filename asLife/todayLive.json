@@ -4,7 +4,7 @@
   "buttonText": "Visite",
   "link": "https://your-link.com",
   "status": "on",
-  "console":  "on"
+  "console":  "on",
   "version": "",
   "licenseKey": "NewspaperReports-AS - Life Official",
   "allowedDomains": ["newspaperreports.com", "localhost", "127.0.0.1", "::1"],
