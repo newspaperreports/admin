@@ -1,168 +1,70 @@
-/* =======================
-   Newspaper Reports Template Style
-   Name:        Newspaper Reports
-   License:     Free Version
-   Version:     3.0
-   Author:      Newspaper Reports
-   Author Url:  https://www.newspaperreports.com
-   Contact:     asupdatemedia518@gmail.com
-========================== */
-
-/* =======================
-   Root Variables
-========================== */
-
-:root {
-    --global-cg-link-font: 700 14px / 28px 'Unify Sans', 'Helvetica Neue', 'Arial Nova', Helvetica, Arial, sans-serif;
-    --global-author-font: 'Unify Sans', 'Helvetica Neue', 'Arial Nova', Helvetica, Arial, sans-serif;
-    --global-author-font-color: #000;
-    --global-nprAS-hd-ads-content: 'Advertisement - scroll for more content';
-    --global-nprAS-hd-ads-onylyContent: 'Advertiser';
-    --global-nprAS-hd-ads-color: #787878;
-    --global-nprAS-hd-ads-font: 'Helvetica Neue', 'Arial Nova', Helvetica, Arial, sans-serif;
-    --global-asM-ads-author-font: 'Unify Sans', 'Helvetica Neue', 'Arial Nova', Helvetica, Arial, sans-serif;
-    --global-asM-ads-author-color: #626262;
-    --global-asM-ads-author-hover-color: #b60a7c;
-    --npr-sub-link-color: #626262;
-    --npr-sub-link-hover-color: #303030;
-    --npr-section-hdLine-hover-color: #d60000;
-    --font-family-global: 'Helvetica Neue', 'Arial Nova', Helvetica, Arial, sans-serif;
-    --global-item-headline-font: 'Unify Sans', 'Helvetica Neue', 'Arial Nova', Helvetica, Arial, sans-serif;
-    --global-top-headlines-font: 'Georgia Pro', Georgia, 'Droid Serif', serif;
-    --global-item-hero-headline-color: #303030;
-    --global-item-headline-color: #000;
-    --global-item-headline-hover-color: #626262;
-    --global-item-description-font: 'Georgia Pro', Georgia, 'Droid Serif', serif;
-    --global-item-description-color: #303030;
-    --global-item-description-hover-color: #575050fb;
-    --global-item-tag-font: 'Helvetica Neue', 'Arial Nova', Helvetica, Arial, sans-serif;
-    --global-item-tag-color: #AA1E23;
-    --global-item-publish-time-color: #626262;
-    --global-border-any-side-color: #c2c2c2;
-    --global-third-party-athor-font: 'Unify Sans', 'Helvetica Neue', 'Arial Nova', Helvetica, Arial, sans-serif;
-    --global-third-party-athor-color: #626262;
-    --txt-whi-color: #ffffff;
-    --txt-headline-bg-white: #FFFFFF;
-    --txt-bl-color: #000;
-    --gbMenuBg-color: #303030;
-    --cgHover-color: #ff00bf;
-    --hero-pTitleHover-color: #01eeff;
-    --btnBx-color: #04AA6D;
-    --global-cg-link-color: #fff;
-    --global-cg-link-hover-color: #00FF7F;
-    --global-border-top-color: rgb(0, 152, 254);
-    /* Add Primary */
-    --primary: #FF0000;
-    --primary-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    --secondary: #282828;
-    --light: #f9f9f9;
-    --dark: #212121;
-    --gray: #aaaaaa;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-a {
-  text-decoration: none;
+.asNpr_wt_notify_area {
+    font: 0px 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: fixed;
+    left: 25px;
+    bottom: 25px;
+    width: 300px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    z-index: 99999;
+    overflow: hidden;
 }
 
-.d-flex {
-  display: flex;
+.asNpr_wt_hide {
+    position: absolute;
+    top: 10px;
+    right: 13px;
+    color: #333333;
+    cursor: pointer;
+    transition: color .17s ease;
 }
 
-.meta_asAdmin_live_post_area {
-  position: fixed;
-  display: none;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 50%;
-  z-index: 99999;
-  animation: fadeIn 0.5s ease-in-out forwards;
+.asNpr_wt_logo {
+    float: left;
+    width: 70px;
+    height: 70px;
+    margin: 0 10px 0 0;
+    background: #f9f9f9 url(my_pic.jpeg);
+    border-radius: 6px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-40%) scale(0.95); }
-  to { opacity: 1; transform: translateY(-50%) scale(1); }
+.asNpr_wt_headline {
+    font-size: 16px;
+    font-weight: 600;
+    color: #171921;
+    margin: 0 0 5px;
 }
 
-.asAdmin_live_info {
-  position: relative;
-  
+.asNpr_wt_des {
+    font-size: 14px;
+    color: #626262;
+    line-height: 18px;
+    margin: 0 0 15px;
 }
 
-.asAdmin_live_aa {
-  display: block;
-  position: relative;
-  width: 300px;
-  height: auto;
-  padding: 10px;
-  border-radius: 6px;
-  background-color: #fff;
-  box-shadow: 1px 1px 3px rgba(0.5, 0.5, 0.5, 0.5);
+.asNpr_wt_ok_btn {
+    font: 600 14px / 28px 'Unify Sans', 'Helvetica Neue', 'Arial Nova', Helvetica, Arial, sans-serif;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #560be2;
+    border-radius: 50px;
+    transition: all 0.3s ease;
 }
 
-.asAdmin_live_headLine {
-  font: 700 16px / 22px var(--primary-font);
-  color: var(--global-item-headline-color);
-}
-
-.asAdmin_live_view_btn {
-  width: 100%;
-  margin: 10px 0 0;
-  font: 600 14px / 28px var(--global-item-headline-font);
-  border: 1px solid var(--global-border-any-side-color);
-  border-radius: 50px;
-  cursor: pointer;
-  color: #fff;
-  background-color: #560be2;
-  transition: all 0.3s ease;
-}
-
-.asAdmin_live_view_btn:hover {
-  color: #00FF7F;
-  background-color: #303030;
-}
-
-.asAdmin_Live_image {
-  float: left;
-  margin: 0 10px 0 0;
-  width: 70px;
-  height: 70px;
-  background: #F9F9FA;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.asAdmin_live_img {
-  width: 100%;
-  height: 100%;
-  max-width: 100%;
-  object-fit: cover;
-}
-
-.asAdmin_post_close {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  padding: 0px 0px;
-  cursor: pointer;
-  background: #fff;
-  border: 1px solid var(--global-border-any-side-color);
-  border-radius: 3px;
-  color: #000;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease;
-}
-
-.asAdmin_post_close span {
-  font-size: 14px;
-  padding: 2px 4px;
-}
-
-.asAdmin_post_close.show {
-  opacity: 1;
-  visibility: visible;
-}
-
-.asAdmin_post_close:hover {
-  color: #FF0000;
+.asNpr_wt_ok_btn:hover {
+    color: #00FF7F;
+    background-color: #303030;
 }
